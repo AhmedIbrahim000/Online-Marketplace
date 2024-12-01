@@ -1,0 +1,51 @@
+﻿@model Final_Project.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Product Information</h2>
+
+<div>
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.category.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>*@
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Quantity)
+            </td>
+            @*<td>
+                <img src="@Url.Content(Model.ImagePath)" width="100" height="100" />
+            </td>*@
+        </tr>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
